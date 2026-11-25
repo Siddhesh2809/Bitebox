@@ -107,35 +107,50 @@
       border-radius: 4px;
     }
 
-    /* Today's Special List */
-    .special-list {
-      margin-top: 10px;
-      padding-left: 24px;
-      list-style-type: decimal;
-    }
+    /* Today's Special Featured Dishes — Circle Row */
+.featured-row {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: nowrap;      /* Ekach line madhe — khali wrap honar nahit */
+  overflow-x: auto;       /* Screen lahan asel tar side scroll */
+  gap: 24px;
+  padding: 12px 6px 16px;
+  background-color: var(--soft-blue);
+  border-radius: 12px;
+}
 
-    .special-list li {
-      background-color: #e0f2fe;
-      color: #0f172a;
-      padding: 9px 12px;
-      margin: 10px 0;
-      border-left: 4px solid var(--royal-blue);
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.featured-item {
+  flex: 0 0 130px;        /* Pratyek dish chi clean width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
 
-    /* Offers & Highlight Box */
-    .offer-box {
-      background-color: var(--soft-blue);
-      border-color: var(--royal-blue);
-    }
+.featured-item img {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;     /* Photo gol (circle) karnyasathi */
+  object-fit: cover;      /* Photo stretch na hota neat fit honyasathi */
+  border: 3px solid var(--royal-blue);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.14);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
 
-    .offer-box p {
-      margin: 10px 0;
-    }
+.featured-item:hover img {
+  transform: scale(1.06);
+  border-color: var(--sky-blue);
+}
 
-    /* Footer */
-    footer {
+.featured-item span {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+  /* Footer */
+  footer {
       text-align: center;
       margin-top: 28px;
       color: #475569;
@@ -182,15 +197,31 @@
     </section>
 
     <section class="specials">
-      <h2>Today's Special Featured Dishes...</h2>
-      <p>Check out our daily specials and treat yourself to something delicious!</p>
-      <ol class="special-list">
-        <li>Mysore Masala Dosa</li>
-        <li>Shahi Paneer</li>
-        <li>Pizza</li>
-        <li>Burger</li>
-      </ol>
-    </section>
+  <h2>Today's Special Featured Dishes...</h2>
+  <p>Check out our daily specials and treat yourself to something delicious!</p>
+
+  <div class="featured-row">
+    <div class="featured-item">
+      <img src="./assets/images/Pasta.webp" alt="Mysore Masala Dosa">
+      <span>Pasta</span>
+    </div>
+
+    <div class="featured-item">
+      <img src="./assets/images/sandwich.webp" alt="Shahi Paneer">
+      <span>Sandwich</span>
+    </div>
+
+    <div class="featured-item">
+      <img src="./assets/images/Pizza.jpg" alt="Pizza">
+      <span>Pizza</span>
+    </div>
+
+    <div class="featured-item">
+      <img src="./assets/images/Burgers.webp" alt="Burger">
+      <span>Burger</span>
+    </div>
+  </div>
+</section>
 
     <section class="hours">
       <h2><em>Opening Hours:</em></h2>
@@ -211,7 +242,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 BiteBox</p>
+    <p> @ 2026 BiteBox</p>
   </footer>
 
 </body>
