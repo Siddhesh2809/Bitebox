@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Customer Registration</h1>
+    <form action=""> 
+        <label for="FullName">Enter Full Name</label>
+        <input type="text" name="FullName" id="FullName" placeholder="Enter your full name" required>
+        <br>
+        <br>
+
+        <label for="E-mail">Enter E-mail</label>
+        <input type="email" name="E-mail" id="E-mail" placeholder="Enter your email" required>
+        <br>
+        <br>
+
+        <label for="Password">Password</label>
+        <input type="password" name="Password" id="Password" placeholder="Enter your password" required minlength="8" charset="UTF-8">
+        <br>
+        <br>
+
+        <label for="age">Enter Age</label>
+        <input type="number" name="age" id="age" min="18" max="99">
+<br>
+<br>
+
+        <label for="Preference">Your Preference</label>
+        <input type="radio" name="Preference" id="Veg" value="Veg">
+        <label for="Veg">Veg</label>
+        <input type="radio" name="Preference" id="Non-Veg" value="Non-Veg">
+        <label for="Non-Veg">Non-Veg</label>
+        <br>
+        <br>
+
+        <label for="Extra">Extra</label>
+        <br>
+        <input type="checkbox" name="Extra" id="Cheese" value="Cheese">
+        <label for="Cheese">Cheese</label>
+        <br>
+        <input type="checkbox" name="Extra" id="mayo" value="mayo">
+        <label for="mayo">mayo</label>
+        <br>
+        <input type="checkbox" name="Extra" id="Origano" value="Origano">
+        <label for="Origano">Origano</label>
+        <br>
+        <input type="checkbox" name="Extra" id="Coca" value="Coca">
+        <label for="Coca">Coca</label>
+        <br>
+        <input type="checkbox" name="Extra" id="Chocolate crust" value="Chocolate crust">
+        <label for="Chocolate crust">Chocolate crust</label>
+        <br>
+        <br>
+
+        <label for="Food">Select Food Item</label>
+        <select name="Food" id="Food" checked>
+            <option value="Burgers">Burgers</option>
+            <option value="Sandwich">Sandwich</option>
+            <option value="pasta">pasta</option>
+            <option value="Pizza">Pizza</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="Date">Select Date</label>
+        <input type="datetime-local" name="Date" id="Date">
+        <br>
+        <br>
+
+        <label for="Picture">Upload Your Picture</label>
+        <input type="file" name="Picture" id="Picture" accept="image/*">
+        <br>
+        <br>
+
+        <label for="color">Choose your Color</label>
+        <input type="color" name="color" id="color">
+        <br>
+        <br>
+
+       <textarea name="Message" id="Message" cols="30" rows="5" placeholder="Enter your message"></textarea>
+        <br>
+        <br>
+
+        <button type="reset">Reset</button>
+
+        <button type="submit" disabled>Submit</button>
+    </form>
+</body>
+</html>
